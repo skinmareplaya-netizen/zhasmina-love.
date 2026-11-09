@@ -1,7 +1,7 @@
 const http=require('node:http');
 const fs=require('node:fs');
 const path=require('node:path');
-const root=path.join(__dirname,'public');
+const root=__dirname;;
 const port=Number(process.env.PORT||3000);
 const hits=new Map();
 function json(res,status,obj){res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(JSON.stringify(obj));}
